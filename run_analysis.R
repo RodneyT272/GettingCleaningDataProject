@@ -5,7 +5,9 @@
 ##  for Johns Hopkins University Coursera class Getting and Cleaning Data.
 ##
 ## REQUIREMENT NOTE 1: This file must be in the same directory as the
-##  "activities_labels.txt" file from the data set. This is the top-level of the data.
+##  "activities_labels.txt" file from the data set. The script considers
+##  this is the top-level of the data. This directory must also be set as
+##  R's working directory [use setwd()]. 
 ## REQUIREMENT NOTE 2: This script requires the 'dplyr' package to be installed.
 ##
 ## Please note: I have not yet taken the Reproducible Research class nor
