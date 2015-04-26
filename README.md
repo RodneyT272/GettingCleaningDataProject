@@ -28,7 +28,9 @@ Please see the R script file in this repo, run_analysis.R, which includes commen
 Choices leading to the specific summary were prescribed by the class project requirements.
 
 ## Code Book
+
 This section describes the data set columns.
+
 1. activity
    * Descpription: The type of activity that was performed by the subject.
    * Units: a string
