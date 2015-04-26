@@ -1,7 +1,13 @@
 # GettingCleaningDataProject
 Home for my project submission for the JHU Data Science course Getting and Cleaning Data.
 
-## CODE BOOK
+## Raw Data
+The raw data was downloaded directly from the Coursera course website as a zip file. Please see the course project description.
+
+## Final Data Set
+The official tidy data set was submitted via the project assignment page on Coursera. For convenience the same file was uploaded to this repo.
+
+## Code Book
 1. activity
    * Descpription: The type of activity that was performed by the subject.
    * Units: a string
@@ -207,5 +213,8 @@ Home for my project submission for the JHU Data Science course Getting and Clean
    * Descpription: Average of the standard deviation of the frequency domain measurement of the body gyroscopic jerk deriviative vector magnitude.
    * Units: radians per second per second.
 
+## Study Design
+As this is a project assignment for the Getting and Cleaning Data class, the data used was prescribed by the instructor. The data came from an experiment performed by a team at the University of California at Irvine's Center for Machine Learning and Intelligent Systems. The data is archived and described here:
+[Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
 
