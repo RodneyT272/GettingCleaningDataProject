@@ -7,6 +7,26 @@ The raw data was downloaded directly from the Coursera course website as a zip f
 ## Final Data Set
 The official tidy data set was submitted via the project assignment page on Coursera. For convenience the same file was uploaded to this repo.
 
+## Data Summary Recipe
+Please see the R script file in this repo, run_analysis.R, which includes comments describing the process.  Below is a summary of the process.
+
+
+1. The console is cleared and an introduction is printed for the user.
+2. The experiment data files are read into R using read.table().
+3. The columns are named in the test and train data frames using setNames().
+4. Project requirements specify only certain measurements (columns) are to be included. These measurements are extracted from the original, complete data set using subsetting and grep().
+5. The data tables representing the activities performed by the subjects is merged with the activity labels tables using merge().
+6. The activity labels data and the subject number data are combined with the measurement data tables using cbind().
+7. The test and training data are combined into one long data frame using rbind().
+8. The subject number column is converted into factors using as.factor().
+9. The complete data frame is grouped by activity and then subject number using the dplyr library function group_by().
+10. The data frame is summarised by the groups defined above by taking the mean of all of the measurements using the dplyr library function summarise_each(). This collapses the data frame into only the rows defined by the grouping and the mean calculations.
+11. The summarised data frame column names are renamed to reflect the averaging of the data using names().
+12. The summarised data frame is exported to a space-delimited, without row names, plain text file named tidy-data.txt, using write.table().
+
+
+Choices leading to the specific summary were prescribed by the class project requirements.
+
 ## Code Book
 This section describes the data set columns.
 1. activity
@@ -217,24 +237,4 @@ This section describes the data set columns.
 ## Study Design
 As this is a project assignment for the Getting and Cleaning Data class, the data used was prescribed by the instructor. The data came from an experiment performed by a team at the University of California at Irvine's Center for Machine Learning and Intelligent Systems. The data is archived and described here:
 [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
-
-## Data Summary Recipe
-Please see the R script file in this repo, run_analysis.R, which includes comments describing the process.  Below is a summary of the process.
-
-
-1. The console is cleared and an introduction is printed for the user.
-2. The experiment data files are read into R using read.table().
-3. The columns are named in the test and train data frames using setNames().
-4. Project requirements specify only certain measurements (columns) are to be included. These measurements are extracted from the original, complete data set using subsetting and grep().
-5. The data tables representing the activities performed by the subjects is merged with the activity labels tables using merge().
-6. The activity labels data and the subject number data are combined with the measurement data tables using cbind().
-7. The test and training data are combined into one long data frame using rbind().
-8. The subject number column is converted into factors.
-9. The complete data frame is grouped by activity and then subject number.
-10. The data frame is summarised by the groups defined above by taking the mean of all of the measurements. This collapses the data frame into only the rows defined by the grouping and the mean calculations.
-11. The summarised data frame column names are renamed to reflect the averaging of the data.
-12. The summarised data frame is exported to a space-delimited plain text file, tidy-data.txt.
-
-
-Choices leading to the specific summary were prescribed by the class project requirements.
 
